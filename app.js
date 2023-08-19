@@ -1,9 +1,10 @@
 const express = require("express");
 const app = express();
-const PORT = process.env.PORT || 4000;
+const PORT = 4000;
 const path = require("path");
 //DATABASE CONNECTION
-require("../mentortask/database/DBconnection");
+const DBconnection = require("../mentortask/database/DBconnection");
+
 app.use(express.json());
 app.use("/", express.static(path.join(__dirname, "./public")));
 
