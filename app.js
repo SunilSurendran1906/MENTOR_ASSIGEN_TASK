@@ -9,7 +9,7 @@ require("./database/DBconnection");
 app.use(express.json());
 app.use("/", express.static(path.join(__dirname, "./public")));
 
-app.use("/", require("../mentortask/routers/root"));
+app.use("/", require("./routers/root"));
 app.use("/mentor", require("./routers/mentors"));
 app.use("/student", require("./routers/students"));
 app.use("/assign-mentor", require("./routers/students"));
