@@ -3,7 +3,8 @@ const app = express();
 const PORT = 4000;
 const path = require("path");
 //DATABASE CONNECTION
-const DBconnection = require("../mentortask/database/DBconnection");
+
+require("./database/DBconnection");
 
 app.use(express.json());
 app.use("/", express.static(path.join(__dirname, "./public")));
